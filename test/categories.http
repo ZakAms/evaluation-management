@@ -1,0 +1,23 @@
+
+
+### get All categories
+Get {{hostname}}/categories HTTP/1.1
+
+
+### Create new Category
+POST  {{hostname}}/categories HTTP/1.1 
+content-type: application/x-www-form-urlencoded 
+ 
+ {
+  "name: "Aminut",
+  "description": "Aminut questions",
+  "parentId": null
+}
+
+### Get Category by ID
+GET {{hostname}}/categories/379fcedb-44bd-49ea-b672-80335061c647
+
+
+### Delete Category by ID
+DELETE  {{hostname}}/categories/379fcedb-44bd-49ea-b672-80335061c647
+
