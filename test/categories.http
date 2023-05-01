@@ -11,8 +11,8 @@ content-type: application/x-www-form-urlencoded
  {
   "name: "Aminut",
   "description": "Aminut questions",
-  "parentId": null
-}
+  "parentId": "125c4c0b-c1c0-42ee-aa22-2c2c629826db"
+  }
 
 ### Get Category by ID
 GET {{hostname}}/categories/379fcedb-44bd-49ea-b672-80335061c647
@@ -21,3 +21,23 @@ GET {{hostname}}/categories/379fcedb-44bd-49ea-b672-80335061c647
 ### Delete Category by ID
 DELETE  {{hostname}}/categories/379fcedb-44bd-49ea-b672-80335061c647
 
+
+### Update Category name
+PATCH  {{hostname}}/categories/314019b3-09bd-45d1-9b7f-b0a61dcd9cb7/name
+Content-Type: application/x-www-form-urlencoded
+
+name=aminut2
+
+### Update Category description
+PATCH  {{hostname}}/categories/4ca7ef42-b614-44ca-a1ad-57b0390465d0/description
+Content-Type: application/x-www-form-urlencoded
+
+description=new aminut test
+
+
+
+### Filter Category by parentId //null == root
+GET {{hostname}}/categories?parentId=null
+
+### Filter Category by search 
+GET {{hostname}}/categories?search=questions
